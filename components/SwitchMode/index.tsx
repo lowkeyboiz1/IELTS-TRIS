@@ -1,24 +1,37 @@
-import React from 'react'
-import { FormControlLabel } from '@mui/material'
-import { useColorScheme } from '@mui/material/styles'
-import Switch from '@mui/material/Switch'
+'use client'
+
+import { Box, FormControlLabel, IconButton } from '@mui/material'
+import { useTheme } from 'next-themes'
+import { useState } from 'react'
+import LightModeIcon from '@mui/icons-material/LightMode'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 function SwitchMode() {
-  // const { mode, setMode } = useColorScheme()
+  const { theme, setTheme } = useTheme()
 
-  const handleChange = () => {
-    // setMode(mode === 'dark' ? 'light' : 'dark')
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
   }
-
   return (
-    // <FormControlLabel
-      // control={
-        // <Switch color='primary' checked={mode === 'dark'} onChange={handleChange} />
-      // }
-      // label={mode === 'dark' ? 'Dark Mode' : 'Light Mode'}
-      // labelPlacement='end'
-    // />
-    <></>
+    <>
+      <Box>
+        <IconButton
+          sx={{ ml: 1 }}
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          color='inherit'
+        >
+          {theme === 'dark' ? (
+            <>
+              <DarkModeIcon />
+            </>
+          ) : (
+            <>
+              <LightModeIcon />
+            </>
+          )}
+        </IconButton>
+      </Box>
+    </>
   )
 }
 
