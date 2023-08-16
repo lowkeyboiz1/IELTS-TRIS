@@ -12,23 +12,25 @@ import SwitchMode from '../SwitchMode'
 
 function Header() {
   return (
-    <>
-      <header className='flex items-center justify-between h-[60px] bg-white px-6'>
+    <div className='fixed left-0 right-0 z-10'>
+      <header className='flex items-center justify-between h-[60px] px-6 bg-[#0d1224] text-white'>
+        <Link href='/'>
+          <div className='font-bold'>IELTS TRIS</div>
+        </Link>
+        <div className='hidden lg:block'>
+          <RenderListMenu />
+        </div>
+        {/* <div className=''>
+          <SwitchMode />
+        </div> */}
         <div className='block lg:hidden'>
           <Driver>
             <HambergerMenu size='32' color='#FF8A65' />
           </Driver>
         </div>
-        <Link href='/'>
-          <div className=''>logo</div>
-        </Link>
-        <div className='hidden lg:block'>
-          <RenderListMenu />
-        </div>
-        <SwitchMode />
       </header>
-      <Divider />
-    </>
+      <div className='border-b-[0.5px] border-[#E0E0E0]'></div>
+    </div>
   )
 }
 
@@ -44,15 +46,17 @@ const RenderListMenu = () => {
     {
       id: 2,
       title: 'Writing Task 1',
-      url: '',
+      url: 'WT1',
       children: [
         {
           id: 8,
           title: 'Compare/Contrast',
+          url: '',
         },
         {
           id: 9,
           title: 'Khang',
+          url: '',
         },
       ],
     },
@@ -64,10 +68,12 @@ const RenderListMenu = () => {
         {
           id: 10,
           title: 'Compare/Contrast',
+          url: '',
         },
         {
           id: 11,
           title: 'Khang123',
+          url: '',
         },
       ],
     },
@@ -116,7 +122,9 @@ const ItemMenuList = ({ menu }: { menu: any }) => {
   return (
     <>
       <div className={styles.list}>
-        <div className={styles.listTitle}>{menu.title}</div>
+        <Link className={styles.listTitle} href={menu.url}>
+          {menu.title}
+        </Link>
         {menu?.children && (
           <>
             <div className={styles.moreIcon}>
@@ -145,9 +153,11 @@ const ItemMenu = ({
 }) => {
   return (
     <>
-      <div className={styles.menuItem} onClick={handleClose}>
-        {menuChildren.title}
-      </div>
+      <Link href={menuChildren.url}>
+        <div className={styles.menuItem} onClick={handleClose}>
+          {menuChildren.title}
+        </div>
+      </Link>
       <div className={styles.divider}>
         <Divider />
       </div>

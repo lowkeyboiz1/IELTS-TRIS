@@ -5,6 +5,7 @@
   position: relative;
   cursor: pointer;
   transition: 0.1s;
+  color: #d3d8e8;
 
   &::after {
     content: '';
@@ -46,7 +47,7 @@
   }
 
   &:hover {
-    color: #e67e22;
+    color: white;
 
     .moreIcon {
       transform: rotate(180deg);

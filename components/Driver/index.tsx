@@ -95,10 +95,10 @@ function Driver({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div className='cursor-pointer' onClick={toggleDrawer('left', true)}>
+      <div className='cursor-pointer' onClick={toggleDrawer('right', true)}>
         {children}
       </div>
-      <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
+      <Drawer anchor={'right'} open={state['right']} onClose={toggleDrawer('right', false)}>
         <List
           sx={{
             width: '100%',
@@ -133,7 +133,7 @@ const RenderChildrenMenu = ({
     <ListItemButton
       sx={{ pl: 4 }}
       onClick={() => {
-        setState({ ...state, left: false })
+        setState({ ...state, right: false })
         router.push(`/${menu?.title}`)
       }}
     >
@@ -163,7 +163,7 @@ const RenderMenuItem = ({
         onClick={() => {
           if (!menu?.children?.length) {
             router.push(`/${menu.title !== 'Home' ? menu?.title : ''}`)
-            setState({ ...state, left: false })
+            setState({ ...state, right: false })
           } else {
             setShowChildrenItem(!showChildrenItem)
           }
