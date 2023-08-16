@@ -67,15 +67,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='flex mx-auto max-w-[90%] lg:max-w-[80%] mt-[30px]'>
-        <div className='left w-[70%] text-white flex flex-col gap-6'>
-          <div className='item flex p-4 rounded-[8px] overflow-hidden border-[1px] border-[#262B42]'>
-            <div className='w-[280px] h-[300px] relative rounded-[12px] overflow-hidden flex flex-shrink-0'>
+      <div className='flex flex-col md:flex-row mx-auto max-w-[90%] lg:max-w-[80%] mt-[30px]'>
+        <div className='left w-full md:w-[70%] text-white flex md:flex-col gap-6 flex-wrap'>
+          <div className='item flex flex-col md:flex-row p-4 rounded-[8px] overflow-hidden border-[1px] border-[#262B42]'>
+            <div className='w-full h-[200px] md:w-[280px] md:h-[300px] relative rounded-[12px] overflow-hidden flex flex-shrink-0'>
               <Image src={'/vocanal.png'} fill={true} alt='' className='' />
             </div>
             <div className='info-blog px-4 flex flex-col justify-between'>
               <div className=''>
-                <div className='time-public text-[14px] text-[#dfe6e9]'>05 JULY 2023</div>
+                <div className='time-public mt-2 md:mt-0 text-[14px] text-[#dfe6e9]'>
+                  05 JULY 2023
+                </div>
                 <Link href='/'>
                   <h3
                     style={{ width: 'max-content' }}
@@ -95,7 +97,45 @@ export default function Home() {
                 </div>
               </div>
               {/* dỗ dữ liệu xuống */}
-              <div className='flex justify-end'>
+              <div className='flex justify-end mt-4 md:mt-0'>
+                <div
+                  style={{ width: 'max-content' }}
+                  className='text-right hover:text-[#ff4bbe] cursor-pointer'
+                >
+                  Writing Task 1
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='item flex flex-col md:flex-row p-4 rounded-[8px] overflow-hidden border-[1px] border-[#262B42]'>
+            <div className='w-full h-[200px] md:w-[280px] md:h-[300px] relative rounded-[12px] overflow-hidden flex flex-shrink-0'>
+              <Image src={'/vocanal.png'} fill={true} alt='' className='' />
+            </div>
+            <div className='info-blog px-4 flex flex-col justify-between'>
+              <div className=''>
+                <div className='time-public mt-2 md:mt-0 text-[14px] text-[#dfe6e9]'>
+                  05 JULY 2023
+                </div>
+                <Link href='/'>
+                  <h3
+                    style={{ width: 'max-content' }}
+                    className='title-blog text-[20px] font-bold hover:text-[#ff4bbe] cursor-pointer'
+                  >
+                    Volcano
+                  </h3>
+                </Link>
+                <div className='overflow-hidden line-clamp-5 text-[16px] text-[#dfe6e9]'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+                  quisquam inventore incidunt ea autem modi, consequatur odio tempore
+                  corrupti, vel laborum necessitatibus quasi laboriosam praesentium soluta
+                  perferendis totam ad temporibus. Lorem, ipsum dolor sit amet consectetur
+                  adipisicing elit. Dolores cum doloremque nulla repellendus debitis,
+                  voluptas porro eveniet excepturi saepe sequi, voluptates mollitia
+                  dolorum natus maxime vitae. Laborum dolores ipsa libero?
+                </div>
+              </div>
+              {/* dỗ dữ liệu xuống */}
+              <div className='flex justify-end mt-4 md:mt-0'>
                 <div
                   style={{ width: 'max-content' }}
                   className='text-right hover:text-[#ff4bbe] cursor-pointer'
@@ -106,12 +146,14 @@ export default function Home() {
             </div>
           </div>
           <div className='item flex p-4 rounded-[8px] overflow-hidden border-[1px] border-[#262B42]'>
-            <div className='w-[280px] h-[300px] relative rounded-[12px] overflow-hidden flex flex-shrink-0'>
+            <div className='w-full h-[200px] md:w-[280px] md:h-[300px] relative rounded-[12px] overflow-hidden flex flex-shrink-0'>
               <Image src={'/vocanal.png'} fill={true} alt='' className='' />
             </div>
             <div className='info-blog px-4 flex flex-col justify-between'>
               <div className=''>
-                <div className='time-public text-[14px] text-[#dfe6e9]'>05 JULY 2023</div>
+                <div className='time-public mt-2 md:mt-0 text-[14px] text-[#dfe6e9]'>
+                  05 JULY 2023
+                </div>
                 <Link href='/'>
                   <h3
                     style={{ width: 'max-content' }}
@@ -131,43 +173,7 @@ export default function Home() {
                 </div>
               </div>
               {/* dỗ dữ liệu xuống */}
-              <div className='flex justify-end'>
-                <div
-                  style={{ width: 'max-content' }}
-                  className='text-right hover:text-[#ff4bbe] cursor-pointer'
-                >
-                  Writing Task 1
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='item flex p-4 rounded-[8px] overflow-hidden border-[1px] border-[#262B42]'>
-            <div className='w-[280px] h-[300px] relative rounded-[12px] overflow-hidden flex flex-shrink-0'>
-              <Image src={'/vocanal.png'} fill={true} alt='' className='' />
-            </div>
-            <div className='info-blog px-4 flex flex-col justify-between'>
-              <div className=''>
-                <div className='time-public text-[14px] text-[#dfe6e9]'>05 JULY 2023</div>
-                <Link href='/'>
-                  <h3
-                    style={{ width: 'max-content' }}
-                    className='title-blog text-[20px] font-bold hover:text-[#ff4bbe] cursor-pointer'
-                  >
-                    Volcano
-                  </h3>
-                </Link>
-                <div className='overflow-hidden line-clamp-5 text-[16px] text-[#dfe6e9]'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-                  quisquam inventore incidunt ea autem modi, consequatur odio tempore
-                  corrupti, vel laborum necessitatibus quasi laboriosam praesentium soluta
-                  perferendis totam ad temporibus. Lorem, ipsum dolor sit amet consectetur
-                  adipisicing elit. Dolores cum doloremque nulla repellendus debitis,
-                  voluptas porro eveniet excepturi saepe sequi, voluptates mollitia
-                  dolorum natus maxime vitae. Laborum dolores ipsa libero?
-                </div>
-              </div>
-              {/* dỗ dữ liệu xuống */}
-              <div className='flex justify-end'>
+              <div className='flex justify-end mt-4 md:mt-0'>
                 <div
                   style={{ width: 'max-content' }}
                   className='text-right hover:text-[#ff4bbe] cursor-pointer'
